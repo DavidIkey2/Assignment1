@@ -15,7 +15,6 @@ namespace Assignment1
         static readonly DateTime DEF_DATE_ENROLLED = DateTime.MinValue;
         const string DEF_GRADE = "No grade provided";
         const int DEF_SEMESTER = 1;
-
         
         public DateTime EnrollmentDateEnrolled { get; set; }        
         public string EnrollmentGrade { get; set; }

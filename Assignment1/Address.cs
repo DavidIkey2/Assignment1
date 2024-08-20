@@ -11,40 +11,40 @@ namespace Assignment1
         private string streetNum;
         private string streetName;
         private string suburb;
-        private int postcode;
+        private string postcode;
         private string state;
 
         const string DEF_STREET_NUM = "No street num provided";
         const string DEF_STREET_NAME = "No street name provided";
         const string DEF_SUBURB = "No suburb provided";
-        const int DEF_POSTCODE = 0;
-        const string DEF_SUBURB = "No suburb provided";
+        const string DEF_POSTCODE = "No postcode provided";
+        const string DEF_STATE = "No state provided";
 
-        // Property Assessor Method for subjectCode 
-        public string SubjectSubjectCode { get; set; }
-
-        // Property Assessor Method for subjectName
-        public string SubjectSubjectName { get; set; }
-
-        // Property Assessor Method for cost
-        public double SubjectCost { get; set; }
+        // Property Assessor Methods
+        public string AddressStreetNum { get; set; }
+        public string AddressStreetName { get; set; }
+        public string AddressSuburb { get; set; }
+        public string AddressPostcode { get; set; }
+        public string AddressState { get; set; }
 
         //  Constructor (no args)
-        public Subject() : this(DEF_SUBJECT_CODE, DEF_SUBJECT_NAME, DEF_COST)
+        public Address() : this(DEF_STREET_NUM, DEF_STREET_NAME, DEF_SUBURB, DEF_POSTCODE, DEF_STATE)
         {
         }
 
         //  Constructor (all args)
-        public Subject(string subjectCode, string subjectName, double cost)
+        public Address(string streetNum, string streetName, string suburb, string postcode, string state)
         {
-            SubjectSubjectCode = subjectCode;
-            SubjectSubjectName = subjectName;
-            SubjectCost = cost;
+            AddressStreetNum = streetNum;
+            AddressStreetName = streetName;
+            AddressSuburb = suburb;
+            AddressPostcode = postcode;
+            AddressState = state;
         }
 
         public override string ToString()
         {
-            return "Subject Code: " + SubjectSubjectCode + " Subject Name: " + SubjectSubjectName + " Cost: " + SubjectCost;
+            return "Street Num: " + AddressStreetNum + " Street Name: " + AddressStreetName + " Suburb: " + AddressSuburb + " Postcode: " + AddressPostcode + "";
         }
 
 
