@@ -26,13 +26,22 @@ namespace Assignment1
         public string AddressSuburb { get; set; }
         public string AddressPostcode { get; set; }
         public string AddressState { get; set; }
-
-        //  Constructor (no args)
+        
+        /// <summary>
+        /// Constructor (no args)
+        /// </summary>
         public Address() : this(DEF_STREET_NUM, DEF_STREET_NAME, DEF_SUBURB, DEF_POSTCODE, DEF_STATE)
         {
         }
 
-        //  Constructor (all args)
+        /// <summary>
+        /// Constructor (all args)
+        /// </summary>
+        /// <param name="streetNum">What street number</param>
+        /// <param name="streetName">The street name</param>
+        /// <param name="suburb">Suburb or province</param>
+        /// <param name="postcode">Post or zip code</param>
+        /// <param name="state">State or territory</param>
         public Address(string streetNum, string streetName, string suburb, string postcode, string state)
         {
             AddressStreetNum = streetNum;
@@ -41,10 +50,13 @@ namespace Assignment1
             AddressPostcode = postcode;
             AddressState = state;
         }
-
+        /// <summary>
+        /// To String Method
+        /// </summary>
+        /// <returns>All address information</returns>
         public override string ToString()
         {
-            return "Street Num: " + AddressStreetNum + " Street Name: " + AddressStreetName + " Suburb: " + AddressSuburb + " Postcode: " + AddressPostcode + "";
+            return "\nStreet Num: " + AddressStreetNum + "\nStreet Name: " + AddressStreetName + "\nSuburb: " + AddressSuburb + "\nPostcode: " + AddressPostcode + "\nState: " + AddressState;
         }
 
 

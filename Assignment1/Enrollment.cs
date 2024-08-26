@@ -20,18 +20,31 @@ namespace Assignment1
         public string EnrollmentGrade { get; set; }
         public int EnrollmentSemester { get; set; }
         public Subject EnrollmentSubject { get; set; }
-
-        // no arg
+       
+        /// <summary>
+        /// No arg constructor 
+        /// </summary>
         public Enrollment() : this(DEF_DATE_ENROLLED, DEF_GRADE, DEF_SEMESTER)
         {            
         }
 
-        // all arg
+        /// <summary>
+        /// All arg constructor
+        /// </summary>
+        /// <param name="dateEnrolled">When you enrolled</param>
+        /// <param name="grade">The grade you got</param>
+        /// <param name="semester">The semester you enrolled in</param>
         public Enrollment(DateTime dateEnrolled, string grade, int semester) : this(dateEnrolled, grade, semester, new Subject())
         {
         }
-        
-        // inherited
+
+        /// <summary>
+        /// Inherited Constructor
+        /// </summary>
+        /// <param name="dateEnrolled">When you enrolled</param>
+        /// <param name="grade">The grade you got</param>
+        /// <param name="semester">The semester you enrolled in</param>
+        /// <param name="subject">The subject details</param>
         public Enrollment(DateTime dateEnrolled, string grade, int semester, Subject subject)
         {
             EnrollmentDateEnrolled = dateEnrolled;
@@ -39,9 +52,13 @@ namespace Assignment1
             EnrollmentSemester = semester;
             EnrollmentSubject = subject;
         }
+        /// <summary>
+        /// To String
+        /// </summary>
+        /// <returns>All enrollment and subject info</returns>
         public override string ToString()
         {
-            return "Date Enrolled: " + EnrollmentDateEnrolled + " Grade: " + EnrollmentGrade + " Semester: " + EnrollmentSemester + " Subject: " + EnrollmentSubject + base.ToString();
+            return "\nDate Enrolled: " + EnrollmentDateEnrolled + "\nGrade: " + EnrollmentGrade + "\nSemester: " + EnrollmentSemester + EnrollmentSubject;
         }
 
     }

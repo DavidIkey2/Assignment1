@@ -25,22 +25,33 @@ namespace Assignment1
         // Property Assessor Method for cost
         public double SubjectCost { get; set; }
 
-        //  Constructor (no args)
+        
+        /// <summary>
+        /// Constructor (no args)
+        /// </summary>
         public Subject() : this(DEF_SUBJECT_CODE, DEF_SUBJECT_NAME, DEF_COST)
         {
         }
-
-        //  Constructor (all args)
+      
+        /// <summary>
+        /// Constructor (all args)
+        /// </summary>
+        /// <param name="subjectCode">The alpha numeric subject code</param>
+        /// <param name="subjectName">The subject name</param>
+        /// <param name="cost">How much it costs</param>
         public Subject(string subjectCode, string subjectName, double cost)
         {
             SubjectSubjectCode = subjectCode;
             SubjectSubjectName = subjectName;
             SubjectCost = cost;
         }
-
+        /// <summary>
+        /// To String Method
+        /// </summary>
+        /// <returns>All subject information</returns>
         public override string ToString()
         {
-            return "Subject Code: " + SubjectSubjectCode + " Subject Name: " + SubjectSubjectName + " Cost: " + SubjectCost;
+            return "\nSubject Code: " + SubjectSubjectCode + "\nSubject Name: " + SubjectSubjectName + "\nCost: " + SubjectCost;
         }
 
 
