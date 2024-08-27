@@ -119,15 +119,9 @@ namespace Assignment1
             Console.WriteLine("\n");
             Console.WriteLine(student2.ToString());
             Console.ReadKey();
-           
             Console.WriteLine("\n");
-            Console.WriteLine("Comparing object strings using == operator: " + (student1 == student2));
-            Console.WriteLine("Comparing object strings using != operator: " + (student1 != student2));
-            Console.ReadKey();
-            Console.WriteLine("\n");
-            Console.WriteLine(student1.ToString());
-            Console.WriteLine("\n");
-            Console.WriteLine(student2.ToString());
+            Console.WriteLine("Student 1 hashcode: " + student1.GetHashCode());
+            Console.WriteLine("Student 2 hashcode: " + student2.GetHashCode());
             Console.ReadKey();
         }
     }

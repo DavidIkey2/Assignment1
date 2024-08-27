@@ -108,7 +108,7 @@ namespace Assignment1
         /// <returns>The hash code for student id</returns>
         public override int GetHashCode()
         {
-            return this.studentID.GetHashCode();
+            return this.StudentStudentID.GetHashCode();
         }
 
 
