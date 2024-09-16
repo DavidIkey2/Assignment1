@@ -3,9 +3,9 @@ using System.Data.Common;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Assignment1
+namespace TafeEnrolment1
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -188,6 +188,17 @@ namespace Assignment1
                 Console.Write(thing + "\n ");
             }
             Console.ReadKey();
+            Console.WriteLine("\n");
+            Student Test1 = new Student(111222333, "Business", new DateTime(2024, 5, 30));
+            Student Test2 = new Student(111222666, "Business", new DateTime(2024, 5, 30));
+            Console.WriteLine("linear search found, found at " + Utility.LinearSearchArray(students, Test1));
+            Console.WriteLine("linear search not found, found at " + Utility.LinearSearchArray(students, Test2));
+            Utility.BubbleSortAsc(students);
+            Console.WriteLine("\n");
+            Console.WriteLine("binary search found, found at " + Utility.BinarySearchArray(students, Test1));
+            Console.WriteLine("binary search not, found at " + Utility.BinarySearchArray(students, Test2));
+            Console.ReadKey();
+
         }
     }
 }

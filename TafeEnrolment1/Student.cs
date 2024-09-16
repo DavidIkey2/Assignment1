@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment1
+namespace TafeEnrolment1
+
 {
-    class Student : Person, IComparable<Student>
+    public class Student : Person, IComparable<Student>
     {
         private int studentID;
         private string program;
@@ -174,10 +175,10 @@ namespace Assignment1
         /// Compare to method
         /// </summary>
         /// <param name="other"></param>
-        /// <returns>0 if equal -1 if not equal</returns>
+        /// <returns>0 if equal -1 or 1 if not equal</returns>
         public int CompareTo(Student other)
         {
             return this.StudentStudentID.CompareTo(other.StudentStudentID);
-        }
+        }        
     }
 }
